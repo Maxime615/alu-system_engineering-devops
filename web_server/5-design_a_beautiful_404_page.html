@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Ceci n'est pas une page</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #0b1d12 0%, #1f4d2c 70%, #6b4a2b 70%, #4a3220 100%);
+      font-family: Georgia, "Times New Roman", serif;
+      color: #f4ecd8;
+      overflow: hidden;
+    }
+    .stars span {
+      position: absolute;
+      width: 3px; height: 3px;
+      background: #fff8dc;
+      border-radius: 50%;
+      animation: twinkle 3s infinite ease-in-out;
+    }
+    @keyframes twinkle { 50% { opacity: 0.2; } }
+    .card { text-align: center; position: relative; z-index: 1; padding: 2rem; }
+    .code {
+      font-size: clamp(6rem, 22vw, 12rem);
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      color: #f2c94c;
+      text-shadow: 0 6px 0 #8a6d1f;
+    }
+    .code .zero {
+      display: inline-block;
+      animation: sprout 2.5s infinite ease-in-out;
+    }
+    @keyframes sprout {
+      0%, 100% { transform: rotate(-8deg); }
+      50% { transform: rotate(8deg); }
+    }
+    .pipe {
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-style: italic;
+      margin: 0.5rem 0 1rem;
+    }
+    p { max-width: 32rem; margin: 0 auto 1.8rem; line-height: 1.6; opacity: 0.9; }
+    a {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      border-radius: 999px;
+      background: #f2c94c;
+      color: #1f2a17;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    a:hover { transform: translateY(-3px); }
+    .seed { font-size: 2.5rem; margin-top: 2rem; animation: sprout 2.5s infinite ease-in-out; }
+  </style>
+</head>
+<body>
+  <div class="stars">
+    <span style="top:8%;left:12%"></span>
+    <span style="top:15%;left:70%;animation-delay:1s"></span>
+    <span style="top:25%;left:40%;animation-delay:2s"></span>
+    <span style="top:10%;left:88%;animation-delay:0.5s"></span>
+    <span style="top:30%;left:20%;animation-delay:1.5s"></span>
+    <span style="top:5%;left:55%;animation-delay:2.5s"></span>
+  </div>
+  <div class="card">
+    <div class="code">4<span class="zero">0</span>4</div>
+    <h1 class="pipe">Ceci n'est pas une page</h1>
+    <p>We planted this page, watered it, and waited... but nothing grew here.
+       The page you're looking for was never sown, or it has been harvested.</p>
+    <a href="/">Back to the main field</a>
+    <div class="seed">&#127793;</div>
+  </div>
+</body>
+</html>
